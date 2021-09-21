@@ -15,6 +15,8 @@
 		D38644B926F94DC90085E845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38644B826F94DC90085E845 /* Assets.xcassets */; };
 		D38644BC26F94DC90085E845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38644BA26F94DC90085E845 /* LaunchScreen.storyboard */; };
 		D38644C426F94EC10085E845 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D38644C326F94EC10085E845 /* GoogleService-Info.plist */; };
+		D38644C626FA82440085E845 /* EntrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38644C526FA82440085E845 /* EntrarViewController.swift */; };
+		D38644C826FA82DD0085E845 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38644C726FA82DD0085E845 /* CadastroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		D38644BB26F94DC90085E845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D38644BD26F94DC90085E845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38644C326F94EC10085E845 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D38644C526FA82440085E845 /* EntrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrarViewController.swift; sourceTree = "<group>"; };
+		D38644C726FA82DD0085E845 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		ED5CB3B9C949E6902EB7E88C /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,8 @@
 				D38644AF26F94DC70085E845 /* AppDelegate.swift */,
 				D38644B126F94DC70085E845 /* SceneDelegate.swift */,
 				D38644B326F94DC70085E845 /* ViewController.swift */,
+				D38644C726FA82DD0085E845 /* CadastroViewController.swift */,
+				D38644C526FA82440085E845 /* EntrarViewController.swift */,
 				D38644B526F94DC70085E845 /* Main.storyboard */,
 				D38644B826F94DC90085E845 /* Assets.xcassets */,
 				D38644BA26F94DC90085E845 /* LaunchScreen.storyboard */,
@@ -209,8 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38644C626FA82440085E845 /* EntrarViewController.swift in Sources */,
 				D38644B426F94DC70085E845 /* ViewController.swift in Sources */,
 				D38644B026F94DC70085E845 /* AppDelegate.swift in Sources */,
+				D38644C826FA82DD0085E845 /* CadastroViewController.swift in Sources */,
 				D38644B226F94DC70085E845 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
