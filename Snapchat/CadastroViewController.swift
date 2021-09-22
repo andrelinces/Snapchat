@@ -46,8 +46,19 @@ class CadastroViewController: UIViewController {
                             
                             if erro == nil {
                                 
-                                print("Sucesso ao cadastrar o usuário")
                                 
+                                if usuario == nil {
+                                    
+                                    self.exibirMensagem(titulo: "Erro de autenticação", mensagem: "Erro ao autenticar o usuário, tente novamente")
+                                    
+                                }else{
+                                    
+                                    print("Sucesso ao cadastrar o usuário")
+                                    //Redireciona o usuário para a tela principal
+                                    self.performSegue(withIdentifier: "cadastroLoginSegue", sender: nil)
+                                    
+                                }
+                            
                             }else{
                                 //print para testar mensagem em caso de falha ao cadastrar usuário
                                 //print("Erro ao cadastrar o usuário")
