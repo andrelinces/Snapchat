@@ -76,7 +76,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="SnapChat" id="BXL-DJ-L1P"/>
                     <connections>
-                        <segue destination="N6B-p1-PCo" kind="presentation" identifier="loginAutomaticoSegue" id="w4Z-HP-J68"/>
+                        <segue destination="c1O-d2-e6g" kind="presentation" identifier="loginAutomaticoSegue" id="w4Z-HP-J68"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -148,36 +148,53 @@
                     <connections>
                         <outlet property="email" destination="uXw-t4-xma" id="Duv-ch-BIf"/>
                         <outlet property="senha" destination="NmQ-Dp-EAi" id="dmh-Mk-b8y"/>
-                        <segue destination="N6B-p1-PCo" kind="presentation" identifier="loginSegue" id="2Hw-5t-Q40"/>
+                        <segue destination="c1O-d2-e6g" kind="presentation" identifier="loginSegue" id="2Hw-5t-Q40"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ega-1g-oj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1775" y="-427"/>
         </scene>
-        <!--View Controller-->
+        <!--Snaps-->
         <scene sceneID="7dg-4k-2lq">
             <objects>
                 <viewController id="N6B-p1-PCo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zOl-iS-3Ky">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tela principal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0z-vU-zFx">
-                                <rect key="frame" x="186" y="392" width="100" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UNC-pQ-Kcs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Snaps" id="a8j-4d-tqX">
+                        <barButtonItem key="leftBarButtonItem" title="Sair" id="jp1-iy-jJm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="N1p-dq-GtV">
+                            <connections>
+                                <segue destination="HoJ-J5-swS" kind="show" id="V6E-eJ-FE3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DF-r2-SJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2777" y="-10"/>
+            <point key="canvasLocation" x="3686.9565217391305" y="-10.044642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JB1-ig-UkB">
+            <objects>
+                <viewController id="HoJ-J5-swS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6NP-2f-BGh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yGD-jz-dTx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3dG-22-AHW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pw-3x-wAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4504" y="-10"/>
         </scene>
         <!--Cadastro-->
         <scene sceneID="Sce-T9-Tfg">
@@ -261,7 +278,7 @@
                         <outlet property="confirmarSenha" destination="L0x-DL-ZCl" id="q9S-60-ogg"/>
                         <outlet property="email" destination="SFi-76-iBi" id="mCS-4Q-0Bn"/>
                         <outlet property="senha" destination="ibV-Ff-1kM" id="q7B-Tw-RDm"/>
-                        <segue destination="N6B-p1-PCo" kind="presentation" identifier="cadastroLoginSegue" id="YZJ-0m-8f3"/>
+                        <segue destination="c1O-d2-e6g" kind="presentation" identifier="cadastroLoginSegue" id="YZJ-0m-8f3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xj4-IM-Rev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,6 +302,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htJ-Mr-RNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="54.910714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MId-cX-NzG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c1O-d2-e6g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zcg-Bn-DpK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N6B-p1-PCo" kind="relationship" relationship="rootViewController" id="kpN-Xk-goM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfE-9V-QNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2776.811594202899" y="-10.044642857142856"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
