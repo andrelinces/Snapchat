@@ -7,7 +7,8 @@
 
 import UIKit
 
-class FotoViewController {
+class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var imagePicker = UIImagePickerController()
     
 }

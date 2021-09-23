@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //teste de deslogar para verificar se o método verificar e redirecionar o usuário já logado está funcionando.
-        
+        /*
         let autenticacao = Auth.auth()
         
         do {
@@ -20,9 +20,9 @@ class ViewController: UIViewController {
         } catch  {
             print("Erro ao deslogar o usuário!")
         }
-        
+        */
         //Autenticação automatica quando o usuário já esta logado.
-        
+        let autenticacao = Auth.auth()
         autenticacao.addStateDidChangeListener { autenticacao, usuario in
             
             if let usuarioLogado = usuario {

@@ -92,29 +92,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8U-Ky-sqk">
-                                <rect key="frame" x="20" y="100" width="48.5" height="21"/>
+                                <rect key="frame" x="20" y="56" width="48.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uXw-t4-xma">
-                                <rect key="frame" x="20" y="131" width="374" height="34"/>
+                                <rect key="frame" x="20" y="87" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzt-3p-69i">
-                                <rect key="frame" x="20" y="185" width="48" height="21"/>
+                                <rect key="frame" x="20" y="141" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NmQ-Dp-EAi">
-                                <rect key="frame" x="20" y="216" width="374" height="34"/>
+                                <rect key="frame" x="20" y="172" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pb-CM-zs1">
-                                <rect key="frame" x="147" y="270" width="120" height="40"/>
+                                <rect key="frame" x="147" y="226" width="120" height="40"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="I3e-QC-CB7"/>
@@ -158,7 +158,7 @@
         <!--Snaps-->
         <scene sceneID="7dg-4k-2lq">
             <objects>
-                <viewController id="N6B-p1-PCo" sceneMemberID="viewController">
+                <viewController id="N6B-p1-PCo" customClass="SnapsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zOl-iS-3Ky">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +167,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Snaps" id="a8j-4d-tqX">
-                        <barButtonItem key="leftBarButtonItem" title="Sair" id="jp1-iy-jJm"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sair" id="jp1-iy-jJm">
+                            <connections>
+                                <action selector="sair:" destination="N6B-p1-PCo" id="fMt-kN-foQ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="N1p-dq-GtV">
                             <connections>
                                 <segue destination="HoJ-J5-swS" kind="show" id="V6E-eJ-FE3"/>
@@ -175,33 +179,36 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="tmm-gy-Cg8" kind="show" identifier="sairSegue" id="a6a-27-2sM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DF-r2-SJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686.9565217391305" y="-10.044642857142856"/>
+            <point key="canvasLocation" x="3668" y="-10"/>
         </scene>
-        <!--View Controller-->
+        <!--Foto View Controller-->
         <scene sceneID="JB1-ig-UkB">
             <objects>
-                <viewController id="HoJ-J5-swS" sceneMemberID="viewController">
+                <viewController id="HoJ-J5-swS" customClass="FotoViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6NP-2f-BGh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cIc-ws-xYU">
-                                <rect key="frame" x="82" y="91" width="250" height="172"/>
+                                <rect key="frame" x="82" y="79" width="250" height="172"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="uBq-t6-7rZ"/>
                                     <constraint firstAttribute="height" constant="172" id="ulA-0K-heA"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUQ-ba-5vo">
-                                <rect key="frame" x="82" y="282" width="250" height="34"/>
+                                <rect key="frame" x="82" y="270" width="250" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvO-pj-wTu">
-                                <rect key="frame" x="147" y="358" width="120" height="40"/>
+                                <rect key="frame" x="147" y="346" width="120" height="40"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Iap-Hw-J0A"/>
@@ -364,6 +371,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Hw-5t-Q40"/>
+        <segue reference="a6a-27-2sM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="200" height="200"/>
