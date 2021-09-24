@@ -3,11 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Necessário acesso a Biblioteca de fotos para envio de um Snap.</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
+	<string>Necessário acesso a libraria para enviar o snap.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Necessário acesso a câmera para envio de foto de um Snap.</string>
+	<string>APP necessita de acesso a camera!</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
