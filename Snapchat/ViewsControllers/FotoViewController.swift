@@ -17,6 +17,7 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var botaoProximo: UIButton!
     
     var imagePicker = UIImagePickerController()
+    var idImagem = NSUUID().uuidString
     
     
     @IBAction func proximoPasso(_ sender: Any) {
@@ -33,12 +34,16 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if let imagemSelecionada = image.image {
             
             if let imagemDados = imagemSelecionada.jpegData(compressionQuality: 0.5) {
-            imagens.child("imagem.jpg").putData(imagemDados, metadata: nil) { metaDados, erro in
+            imagens.child("\(idImagem).jpg").putData(imagemDados, metadata: nil) { metaDados, erro in
                
                 //Caso não ocorra nenhum erro, vai exibir sucesso do print
                 if erro == nil {
-                    
+                    //print para testar o método
                     print("Sucesso ao fazer upload do arquivo!")
+                    
+                    //recuperando a url da imagem selecionada.
+                    
+                                            
                     //Habilitando o botão após salvar a imagem e alterando o texto.
                     self.botaoProximo.isEnabled = true
                     self.botaoProximo.setTitle("Próximo", for: .normal)
@@ -47,6 +52,10 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     
                     print("Erro ao fazer upload do Arquivo")
                     
+                    //Exibindo alerta em caso de erro
+                    let alerta = Alerta(titulo: "Erro ao salvar a imagem!",
+                                        mensagem: "Não foi possível salvar a imagem selecionada, tente novamente")
+                    self.present(alerta.getAlerta(), animated: true, completion: nil)
                 }
                 
             }

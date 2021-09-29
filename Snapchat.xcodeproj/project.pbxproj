@@ -19,6 +19,7 @@
 		D38644C826FA82DD0085E845 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38644C726FA82DD0085E845 /* CadastroViewController.swift */; };
 		D38644CA26FCAE490085E845 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38644C926FCAE490085E845 /* SnapsViewController.swift */; };
 		D38644CC26FCAE830085E845 /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38644CB26FCAE830085E845 /* FotoViewController.swift */; };
+		D3ECFA2E2704973F005B800F /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECFA2D2704973F005B800F /* Alerta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D38644C726FA82DD0085E845 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		D38644C926FCAE490085E845 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		D38644CB26FCAE830085E845 /* FotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoViewController.swift; sourceTree = "<group>"; };
+		D3ECFA2D2704973F005B800F /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		ED5CB3B9C949E6902EB7E88C /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,13 +92,10 @@
 		D38644AE26F94DC70085E845 /* Snapchat */ = {
 			isa = PBXGroup;
 			children = (
+				D3ECFA2C270496F4005B800F /* Models */,
+				D3ECFA2B27049687005B800F /* ViewsControllers */,
 				D38644AF26F94DC70085E845 /* AppDelegate.swift */,
 				D38644B126F94DC70085E845 /* SceneDelegate.swift */,
-				D38644B326F94DC70085E845 /* ViewController.swift */,
-				D38644C726FA82DD0085E845 /* CadastroViewController.swift */,
-				D38644C526FA82440085E845 /* EntrarViewController.swift */,
-				D38644CB26FCAE830085E845 /* FotoViewController.swift */,
-				D38644C926FCAE490085E845 /* SnapsViewController.swift */,
 				D38644B526F94DC70085E845 /* Main.storyboard */,
 				D38644B826F94DC90085E845 /* Assets.xcassets */,
 				D38644BA26F94DC90085E845 /* LaunchScreen.storyboard */,
@@ -104,6 +103,26 @@
 				D38644C326F94EC10085E845 /* GoogleService-Info.plist */,
 			);
 			path = Snapchat;
+			sourceTree = "<group>";
+		};
+		D3ECFA2B27049687005B800F /* ViewsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D38644B326F94DC70085E845 /* ViewController.swift */,
+				D38644C726FA82DD0085E845 /* CadastroViewController.swift */,
+				D38644C526FA82440085E845 /* EntrarViewController.swift */,
+				D38644CB26FCAE830085E845 /* FotoViewController.swift */,
+				D38644C926FCAE490085E845 /* SnapsViewController.swift */,
+			);
+			path = ViewsControllers;
+			sourceTree = "<group>";
+		};
+		D3ECFA2C270496F4005B800F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3ECFA2D2704973F005B800F /* Alerta.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3ECFA2E2704973F005B800F /* Alerta.swift in Sources */,
 				D38644C626FA82440085E845 /* EntrarViewController.swift in Sources */,
 				D38644CC26FCAE830085E845 /* FotoViewController.swift in Sources */,
 				D38644B426F94DC70085E845 /* ViewController.swift in Sources */,
