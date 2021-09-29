@@ -206,7 +206,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaG-C5-0Y9">
                                 <rect key="frame" x="147" y="383" width="120" height="40"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="backgroundColor" red="0.68600000000000005" green="0.32200000000000001" blue="0.871" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="D86-ju-dVH"/>
                                     <constraint firstAttribute="height" constant="40" id="wjj-i6-LBJ"/>

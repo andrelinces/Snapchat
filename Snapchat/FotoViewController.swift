@@ -73,6 +73,11 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let imagemRecuperada = info [ UIImagePickerController.InfoKey.originalImage ] as! UIImage
         //recuperando imagem e exibindo na UIImageView.
         image.image = imagemRecuperada
+        
+        //habilitar o botão próximo quando o usuário selecionar a foto.
+        self.botaoProximo.isEnabled = true
+        self.botaoProximo.backgroundColor = UIColor(red: 0.686, green: 0.322, blue: 0.871, alpha: 1)
+        
         //objeto utilizado para fechar a biblioteca quando o usuário selecionar a foto.
         imagePicker.dismiss(animated: true, completion: nil)
         
