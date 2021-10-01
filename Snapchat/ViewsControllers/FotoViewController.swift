@@ -21,6 +21,7 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     
     @IBAction func proximoPasso(_ sender: Any) {
+        /*
         //Desabilitando o botão quando pressionado exibindo mensagem enquanto carrega a foto selecionada.
         self.botaoProximo.isEnabled = false
         self.botaoProximo.setTitle("Carregando...", for: .normal)
@@ -41,13 +42,42 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     //print para testar o método
                     print("Sucesso ao fazer upload do arquivo!")
                     
-                    //recuperando a url da imagem selecionada.
+                    self.performSegue(withIdentifier: "selecionarUsuarioSegue", sender: nil )
                     
-                                            
+                    
+                    //recuperando a url da imagem selecionada.
+                    /*
+                    imagens.downloadURL { url, erro in
+                     
+                        if erro == nil {
+                            
+                            if let downloadUrl = url {
+                                
+                                let donwloadString = downloadUrl.absoluteString
+                                print( url?.absoluteString )
+                                self.performSegue(withIdentifier: "selecionarUsuarioSegue", sender: donwloadString )
+                            }
+                        }
+                        
+                    }
+                    
+                    
+                    /*
+                    imagens.downloadURL(completion: { (url, error) in
+                    if error == nil {
+                    if let downloadUrl = url {
+                    let downloadString = downloadUrl.absoluteString
+                    print("\(downloadString)")
+                    */
+                    
+                    //enviando usuário para selecionar para quem vai enviar o snap
+                    
+                     *///fim da tentativa de recuperação da URL.
                     //Habilitando o botão após salvar a imagem e alterando o texto.
                     self.botaoProximo.isEnabled = true
                     self.botaoProximo.setTitle("Próximo", for: .normal)
-                    
+                     
+                
                 }else{
                     
                     print("Erro ao fazer upload do Arquivo")
@@ -61,8 +91,49 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
           }
             
-        }
+        }//fim do if imagem selecionada
         
+      */
+        
+        //teste código do fórum
+        
+        self.botaoProximo.isEnabled = false
+        self.botaoProximo.setTitle("Carregando...", for: .normal)
+         
+        let armazenamento = Storage.storage().reference()
+        let imagens = armazenamento.child("imagens")
+         
+        guard let imagemSelecionada = image.image else { return }
+        guard let imageData = imagemSelecionada.jpegData(compressionQuality: 0.5) else { return }
+         
+        let imageReference = imagens.child("\(idImagem).jpg")
+         
+        imageReference.putData(imageData, metadata: nil) { (metaData, error) in
+        if error == nil {
+        print("Sucesso")
+        self.botaoProximo.isEnabled = true
+        self.botaoProximo.setTitle("Feito!", for: .normal)
+        self.botaoProximo.isEnabled = false
+         
+        imageReference.downloadURL(completion: { (url, error) in
+        if error == nil {
+        if let downloadUrl = url {
+        let downloadString = downloadUrl.absoluteString
+        print("\(downloadString)")
+        self.performSegue(withIdentifier: "selecionarUsuarioSegue", sender: downloadString)
+        }
+        } else {
+        print("\(error!) Nada capturado")
+        }
+        })
+         
+        } else {
+        let alerta = Alerta(titulo: "Ocorreu um erro inespero", mensagem: "Erro ao processar o Snap")
+        self.present(alerta.getAlerta(), animated: true, completion: nil)
+        }
+        }
+         
+         
         
         
     }

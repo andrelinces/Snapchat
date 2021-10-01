@@ -241,11 +241,57 @@
                         <outlet property="botaoProximo" destination="LaG-C5-0Y9" id="ObU-vG-4Zp"/>
                         <outlet property="descricao" destination="0iE-ML-saj" id="sge-hF-0Qk"/>
                         <outlet property="image" destination="j9g-65-Sni" id="mDn-uC-p8x"/>
+                        <segue destination="eGp-g4-K0W" kind="show" identifier="selecionarUsuarioSegue" id="gaL-gr-0Hh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXa-Zf-DFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4438" y="-10"/>
+        </scene>
+        <!--Usuarios Table View Controller-->
+        <scene sceneID="Jog-3f-TpT">
+            <objects>
+                <tableViewController id="eGp-g4-K0W" customClass="UsuariosTableViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pwc-Jq-pSZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaReuso" textLabel="qmG-0d-Rv4" detailTextLabel="gBX-Mo-1l3" style="IBUITableViewCellStyleSubtitle" id="osy-M9-4iT">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="osy-M9-4iT" id="sin-Yg-vtC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qmG-0d-Rv4">
+                                            <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gBX-Mo-1l3">
+                                            <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eGp-g4-K0W" id="aKd-RJ-p5u"/>
+                            <outlet property="delegate" destination="eGp-g4-K0W" id="wcD-ma-NGw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Kzi-c0-gcz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WpM-C6-zpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5239" y="-10"/>
         </scene>
         <!--Cadastro-->
         <scene sceneID="Sce-T9-Tfg">
@@ -344,6 +390,7 @@
                     <connections>
                         <outlet property="confirmarSenha" destination="L0x-DL-ZCl" id="q9S-60-ogg"/>
                         <outlet property="email" destination="SFi-76-iBi" id="mCS-4Q-0Bn"/>
+                        <outlet property="nomeCompleto" destination="nZW-bF-aYT" id="DNP-Ql-vgc"/>
                         <outlet property="senha" destination="ibV-Ff-1kM" id="q7B-Tw-RDm"/>
                         <segue destination="c1O-d2-e6g" kind="presentation" identifier="cadastroLoginSegue" id="YZJ-0m-8f3"/>
                     </connections>
