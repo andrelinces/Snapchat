@@ -132,9 +132,21 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.present(alerta.getAlerta(), animated: true, completion: nil)
         }
         }
-         
-         
+           
+    }//fim do método próximo passo
+    
+    //Método criado para passar as informações do snap já recuperado para a classe UsuariosTableViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if segue.identifier == "selecionarUsuarioSegue" {
+            
+            let usuarioViewController = segue.destination as! UsuariosTableViewController
+            
+            usuarioViewController.descricao = self.descricao.text!
+            usuarioViewController.urlImage = sender as! String
+            usuarioViewController.idImagem = self.idImagem
+            
+        }
         
     }
     

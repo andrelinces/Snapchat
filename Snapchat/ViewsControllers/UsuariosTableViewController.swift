@@ -12,6 +12,9 @@ import FirebaseAuth
 class UsuariosTableViewController: UITableViewController {
     
     var usuarios: [ Usuario ] = []
+    var urlImage = ""
+    var descricao = ""
+    var idImagem = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,23 +111,34 @@ class UsuariosTableViewController: UITableViewController {
         //recuperar dados do usuário logado que enviou o snap
         let autenticacao = Auth.auth()
         
-        let idUsuarioLogado = autenticacao.currentUser?.uid
+        if let idUsuarioLogado = autenticacao.currentUser?.uid {
         
-        let snap = [
-        
-            "de": "teste@teste",
-            "nome": "teste",
-            "descricao": "teste legal",
-            "urlImagem": "firebase....",
-            "idImagem": "123wherugue32234"
-            
-        ]
-        
-        //criando segundo nó: id único do snap enviado para o usuário.
-        snaps.childByAutoId().setValue(snap)
-        
-        
-        
+            let usuarioLogado = usuarios.child(idUsuarioLogado)
+            usuarioLogado.observeSingleEvent(of: DataEventType.value) { snapshot in
+                //print para testar e exibir email e nome de quem esta logado. (enviando o snap)
+                //print(snapshot)
+                
+                //recuperando os dados do snapshot
+                let dados = snapshot.value as? NSDictionary
+                  
+                let snap = [
+                
+                    "de": dados?["email"] as! String,
+                    "nome": dados?["nome"] as! String,
+                    "descricao": self.descricao,
+                    "urlImagem": self.urlImage,
+                    "idImagem": self.idImagem
+                    
+                ]
+                
+                //criando segundo nó: id único do snap enviado para o usuário.
+                snaps.childByAutoId().setValue(snap)
+                
+                //Redireciona o usuário após enviar um snap para a tela de snaps recebidos
+                
+            }
+        }//fim do if idUsuarioLogado
+          
     }
     
     

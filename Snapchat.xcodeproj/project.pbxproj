@@ -115,10 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				D3ECFA2F27052F2F005B800F /* UsuariosTableViewController.swift */,
+				D38644CB26FCAE830085E845 /* FotoViewController.swift */,
 				D38644B326F94DC70085E845 /* ViewController.swift */,
 				D38644C726FA82DD0085E845 /* CadastroViewController.swift */,
 				D38644C526FA82440085E845 /* EntrarViewController.swift */,
-				D38644CB26FCAE830085E845 /* FotoViewController.swift */,
 				D38644C926FCAE490085E845 /* SnapsViewController.swift */,
 			);
 			path = ViewsControllers;
