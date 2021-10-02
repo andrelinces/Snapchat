@@ -22,6 +22,7 @@
 		D3ECFA2E2704973F005B800F /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECFA2D2704973F005B800F /* Alerta.swift */; };
 		D3ECFA3027052F2F005B800F /* UsuariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECFA2F27052F2F005B800F /* UsuariosTableViewController.swift */; };
 		D3ECFA3227067D2B005B800F /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECFA3127067D2B005B800F /* Usuario.swift */; };
+		D3ECFA352708F36D005B800F /* Snaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECFA342708F36D005B800F /* Snaps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D3ECFA2F27052F2F005B800F /* UsuariosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosTableViewController.swift; sourceTree = "<group>"; };
 		D3ECFA3127067D2B005B800F /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		D3ECFA33270732F0005B800F /* Snapchat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snapchat.entitlements; sourceTree = "<group>"; };
+		D3ECFA342708F36D005B800F /* Snaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snaps.swift; sourceTree = "<group>"; };
 		ED5CB3B9C949E6902EB7E88C /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 			children = (
 				D3ECFA2D2704973F005B800F /* Alerta.swift */,
 				D3ECFA3127067D2B005B800F /* Usuario.swift */,
+				D3ECFA342708F36D005B800F /* Snaps.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				D3ECFA3027052F2F005B800F /* UsuariosTableViewController.swift in Sources */,
 				D38644C626FA82440085E845 /* EntrarViewController.swift in Sources */,
 				D38644CC26FCAE830085E845 /* FotoViewController.swift in Sources */,
+				D3ECFA352708F36D005B800F /* Snaps.swift in Sources */,
 				D38644B426F94DC70085E845 /* ViewController.swift in Sources */,
 				D38644CA26FCAE490085E845 /* SnapsViewController.swift in Sources */,
 				D38644B026F94DC70085E845 /* AppDelegate.swift in Sources */,
