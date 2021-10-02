@@ -95,7 +95,35 @@ class UsuariosTableViewController: UITableViewController {
         
         let usuarioSelecionado = self.usuarios [ indexPath.row ]
         //print para testar se o método está selecionando corretamente o nome do usuário
-        print(usuarioSelecionado.nome)
+        //print(usuarioSelecionado.nome)
+        let idUsuarioSelecionado = usuarioSelecionado.uid
+        
+        //criando referéncia com o banco de dados.
+        let database = Database.database().reference()
+        let usuarios = database.child("usuarios")
+        
+        //Criando os 'nós' do banco de dados que vai identificar para qual usuário será envia o snap. Primeiro nó : snap
+        let snaps = usuarios.child( idUsuarioSelecionado ).child("snaps")
+        
+        //recuperar dados do usuário logado que enviou o snap
+        let autenticacao = Auth.auth()
+        
+        let idUsuarioLogado = autenticacao.currentUser?.uid
+        
+        let snap = [
+        
+            "de": "teste@teste",
+            "nome": "teste",
+            "descricao": "teste legal",
+            "urlImagem": "firebase....",
+            "idImagem": "123wherugue32234"
+            
+        ]
+        
+        //criando segundo nó: id único do snap enviado para o usuário.
+        snaps.childByAutoId().setValue(snap)
+        
+        
         
     }
     
