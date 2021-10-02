@@ -51,6 +51,9 @@ class UsuariosTableViewController: UITableViewController {
             //print para testar o snapshot
             //print(snapshot)
             
+            //recupera dados do usuário logado.
+            let autenticacao = Auth.auth()
+            let idUsuarioLogado = autenticacao.currentUser?.uid
             
             let dados = snapshot.value as? NSDictionary
             
@@ -61,7 +64,12 @@ class UsuariosTableViewController: UITableViewController {
             
             let usuario = Usuario(email: emailUsuario, nome: nomeUsuario, uid: uidUsuario)
             
-            self.usuarios.append(usuario)
+            //Adiciona usuários no array, condição if para não exibir o usuário logado na lista de usuários disponíveis.
+            if uidUsuario != idUsuarioLogado {
+                
+                self.usuarios.append(usuario)
+            }
+            
             //Reload para recarregar a table view depois de recuperar o array do firebase
             self.tableView.reloadData()
             print( self.usuarios)
@@ -135,6 +143,8 @@ class UsuariosTableViewController: UITableViewController {
                 snaps.childByAutoId().setValue(snap)
                 
                 //Redireciona o usuário após enviar um snap para a tela de snaps recebidos
+                self.navigationController?.popToRootViewController(animated: true)
+                
                 
             }
         }//fim do if idUsuarioLogado

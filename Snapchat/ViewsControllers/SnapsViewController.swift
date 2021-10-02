@@ -6,15 +6,10 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import FirebaseAuth
 
 class SnapsViewController: UIViewController {
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
     @IBAction func sair(_ sender: Any) {
         
@@ -30,6 +25,29 @@ class SnapsViewController: UIViewController {
         } catch  {
             print("Erro ao deslogar o usuário!")
         }
+        
+    }//Fim do método sair.
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Criando referência de autenticação
+        let autenticacao = Auth.auth()
+        
+        
+        if let idUsuarioLogado = autenticacao.currentUser?.uid {
+            
+            //Criando referência com o firebase para acessar os dados do salvos do usuário logado
+            let database = Database.database().reference()
+            let usuarios = database.child("usuarios")
+            
+            let snaps = usuarios.child( idUsuarioLogado ).child("snaps") 
+            
+            //cria ouvinte para o Snaps
+            
+            
+        }
+        
         
     }
     
