@@ -217,7 +217,7 @@
         <!--Foto View Controller-->
         <scene sceneID="wb4-yR-0de">
             <objects>
-                <viewController id="gch-LO-QbX" customClass="FotoViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gch-LO-QbX" customClass="FotoViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0BR-Ik-J0H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +281,7 @@
         <!--Usuários-->
         <scene sceneID="Jog-3f-TpT">
             <objects>
-                <tableViewController id="eGp-g4-K0W" customClass="UsuariosTableViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="eGp-g4-K0W" customClass="UsuariosTableViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pwc-Jq-pSZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -326,25 +326,25 @@
         <!--Detalhes Snap View Controller-->
         <scene sceneID="7Ea-fr-uX1">
             <objects>
-                <viewController id="nbJ-rd-UTl" customClass="DetalhesSnapViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="nbJ-rd-UTl" customClass="DetalhesSnapViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kbs-eI-Rr4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4W-mc-wPe">
-                                <rect key="frame" x="20" y="0.0" width="374" height="256"/>
+                                <rect key="frame" x="20" y="44" width="374" height="256"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="256" id="cJB-bn-1cV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descricao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6I-hI-xzX">
-                                <rect key="frame" x="20" y="271" width="374" height="24"/>
+                                <rect key="frame" x="20" y="315" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te1-hi-VvJ">
-                                <rect key="frame" x="0.0" y="669.5" width="414" height="143.5"/>
+                                <rect key="frame" x="0.0" y="723.5" width="414" height="143.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
