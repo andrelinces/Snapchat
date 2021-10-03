@@ -207,6 +207,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="c5P-06-3bv" id="tq7-RY-OL5"/>
+                        <segue destination="nbJ-rd-UTl" kind="presentation" identifier="detalhesSnapSegue" id="idS-5g-Cye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DF-r2-SJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -322,28 +323,28 @@
             </objects>
             <point key="canvasLocation" x="5239" y="-10"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalhes Snap View Controller-->
         <scene sceneID="7Ea-fr-uX1">
             <objects>
-                <viewController id="nbJ-rd-UTl" sceneMemberID="viewController">
+                <viewController id="nbJ-rd-UTl" customClass="DetalhesSnapViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kbs-eI-Rr4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4W-mc-wPe">
-                                <rect key="frame" x="20" y="44" width="374" height="256"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="256"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="256" id="cJB-bn-1cV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descricao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6I-hI-xzX">
-                                <rect key="frame" x="20" y="315" width="374" height="24"/>
+                                <rect key="frame" x="20" y="271" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te1-hi-VvJ">
-                                <rect key="frame" x="0.0" y="738.5" width="414" height="143.5"/>
+                                <rect key="frame" x="0.0" y="669.5" width="414" height="143.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -361,13 +362,18 @@
                             <constraint firstItem="d6I-hI-xzX" firstAttribute="leading" secondItem="heR-4X-k9Q" secondAttribute="leading" constant="20" id="bAI-s6-jCO"/>
                             <constraint firstItem="d6I-hI-xzX" firstAttribute="top" secondItem="p4W-mc-wPe" secondAttribute="bottom" constant="15" id="uLk-Ek-cue"/>
                             <constraint firstItem="heR-4X-k9Q" firstAttribute="trailing" secondItem="p4W-mc-wPe" secondAttribute="trailing" constant="20" id="wUO-3s-T8O"/>
-                            <constraint firstItem="te1-hi-VvJ" firstAttribute="bottom" secondItem="heR-4X-k9Q" secondAttribute="bottom" constant="20" id="y2o-KL-lCs"/>
+                            <constraint firstItem="te1-hi-VvJ" firstAttribute="bottom" secondItem="heR-4X-k9Q" secondAttribute="bottom" constant="5" id="y2o-KL-lCs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contadorSnap" destination="te1-hi-VvJ" id="gHJ-gY-1cn"/>
+                        <outlet property="descricaoSnap" destination="d6I-hI-xzX" id="pzw-v0-cN5"/>
+                        <outlet property="imagemSnap" destination="p4W-mc-wPe" id="Ztc-wx-pyK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MU9-sX-Pma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6028.985507246377" y="-10.044642857142856"/>
+            <point key="canvasLocation" x="3667" y="682"/>
         </scene>
         <!--Cadastro-->
         <scene sceneID="Sce-T9-Tfg">

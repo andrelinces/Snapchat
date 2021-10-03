@@ -116,6 +116,34 @@ class SnapsViewController:
         
         return celula
         
+    }//fim do método tableview, cellforrowat
+    
+    //Método para tratar o clique no snap escolhido e enviar para o usuário para o detalhe do snap.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let totalSnaps = snaps.count
+        //teste para verificar se existe algum snap para o usuário logado.
+        if totalSnaps > 0 {
+            //montando o snap
+            let snap = self.snaps [ indexPath.row ]
+            //enviando o usuário para o detalhe do snap selecionado.
+            self.performSegue(withIdentifier: "detalhesSnapSegue", sender: snap)
+            
+        }
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detalhesSnapSegue" {
+            
+            let detalhesSnapViewController = segue.destination as! DetalhesSnapViewController
+            
+            //enviando os detalhes do snap para a view SnapsDetalhesController
+            detalhesSnapViewController.snap = sender as! Snaps
+        }
+        
     }
     
 }
